@@ -8,21 +8,20 @@ Prédire la survie des passagers du Titanic (0 ou 1) à partir des données Kagg
 ## 📁 Arborescence
 .
 ├── data/
-│   ├── train.csv          # jeu d’entraînement
+│  ├── train.csv          # jeu d’entraînement
 │   └── test.csv           # jeu de test
 ├── titanic.ipynb         # notebook principal
 ├── submission.csv         # fichier généré pour Kaggle
 └── requirements.txt       # fichier pour les dépendances
-Copy
 
 ---
 
 ## ⚙️ Installation
-```bash
+
 pip install -r requirements.txt   # pandas, scikit-learn, seaborn, matplotlib
 🚀 Usage rapide
 Python
-Copy
+
 from pipeline import pipeline
 import joblib
 
@@ -30,6 +29,7 @@ x, y, x_test, ids, _, _ = pipeline(df_train_raw, df_test_raw)
 
 model = joblib.load("titanic_rf.pkl")
 y_pred = model.predict(x_test)
+
 🧪 Pipeline
 Chargement auto des CSV
 Feature engineering (titre, taille famille, médianes)
@@ -37,14 +37,13 @@ Imputation intelligente
 Encodage & nettoyage
 Modèle RandomForest optimisé (RandomizedSearchCV)
 Génération submission.csv
+
 📈 Performance (80 % échantillon)
-Table
-Copy
 Modèle	Accuracy CV	Log-loss
 RandomForest (tuned)	0.835	0.37
+
 📝 Générer la soumission
 bash
-Copy
+
 python -c "from pipeline import save_csv_submission; save_csv_submission(ids, y_pred)"
-📄 Licence
-MIT – feel free to reuse.
+
