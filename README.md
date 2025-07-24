@@ -6,7 +6,7 @@ Prédire la survie des passagers du Titanic (0 ou 1) à partir des données Kagg
 ---
 
 ## 📁 Arborescence
-'''
+```
 .
 ├── data/
 │  ├── train.csv          # jeu d’entraînement
@@ -16,7 +16,7 @@ Prédire la survie des passagers du Titanic (0 ou 1) à partir des données Kagg
 └── requirements.txt       # fichier pour les dépendances
 
 ---
-
+```
 ## ⚙️ Installation
 
 pip install -r requirements.txt   # pandas, scikit-learn, seaborn, matplotlib
