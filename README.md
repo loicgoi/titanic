@@ -6,6 +6,7 @@ Prédire la survie des passagers du Titanic (0 ou 1) à partir des données Kagg
 ---
 
 ## 📁 Arborescence
+'''
 .
 ├── data/
 │  ├── train.csv          # jeu d’entraînement
